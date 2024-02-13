@@ -1,0 +1,30 @@
+info:
+  version: 1.0.0
+  title: HDFC_PRODUCT
+  name: hdfc_product
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    title: Default Plan
+    description: Default Plan
+    rate-limits:
+      default:
+        value: 100/1hour
+    apis:
+      v10-hdfc1.0.0: {}
+apis:
+  v10-hdfc1.0.0:
+    $ref: v10-hdfc_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
